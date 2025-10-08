@@ -1,0 +1,100 @@
+body{
+    background-color: #fffdf3ff;
+    font-family: "Comfortaa";
+}
+
+.logotipo > img {
+    display: block;
+    margin: auto;
+    max-width: 100px;
+}
+
+.menu, .icons {
+    display: inline-block;
+}
+
+.menu  {
+    width: 40%;
+}
+
+.icons {
+    width: 59%;
+}
+
+.material-symbols-outlined{
+    color: #0a4627ff;
+    float: right;
+    margin-right: 2%;
+}
+
+ul {
+    list-style: none;
+    border: 2px solid #0a4627ff;
+    padding: 15px;
+    background-color: #91adaeff;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+    font-weight: bold;
+}
+
+a:link{
+    color:#0a4627ff;
+}
+
+a:hover{
+    color:#af7e4dff;
+}
+
+.main-img, .main-text{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+.main-text{
+    position: absolute;
+    margin-left: 1%;
+}
+
+.main-text p{
+    text-align: justify;
+    margin-bottom: 5%;
+}
+
+#escalador {
+    width: 100%;
+}
+
+#boton {
+    border: 1px solid #af7e4dff;
+    border-radius: 3px;
+    padding: 15px 30px;
+    background-color: #af7e4dff;
+    font-weight: bold;
+}
+
+.main-text > a:hover{
+    color: #91adaeff;
+}
+
+.texto-sec{
+    margin: 5% auto;
+}
+
+.section-img img{
+    display: block;
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    padding: 2%;
+}
+
+
+
+
+
