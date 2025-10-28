@@ -2,22 +2,6 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.menu_desplegable{
-    position: fixed;
-    right: 10px;
-    top: 50%;
-}
-
-.boton_menu{
-    background: none;
-    border: none;
-    cursor:pointer;
-}
-
-.boton_menu > span.material-symbols-outlined {
-    font-size: 40px;
-}
-
 .filas {
     width: 100%;
     height: 150px;
@@ -131,3 +115,138 @@ a:link{
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
+.menu_desplegable{
+    position: fixed;
+    right: 10px;
+    top: 70%;
+    display:flex;
+    filter: none !important;
+    z-index: 9999;
+}
+
+.boton_menu{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display:flex;
+}
+
+.boton_menu > span.material-symbols-outlined {
+    font-size: 40px;
+}
+
+.submenu.oculto{
+    display: none;
+}
+
+.submenu.visible{
+    display:block;
+    min-width: 150px;
+}
+
+.submenu button{
+    display:block;
+    width: 100%;
+    margin: 4px 0;
+    font-weight: bold;
+}
+
+.submenu button:hover{
+    background-color:rgb(191, 188, 242);
+}
+
+.modo-oscuro {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.modo-oscuro .filas {
+  background-color: #333 !important;
+}
+
+.modo-oscuro .personajes {
+  background-color: #444 !important; 
+}
+
+.modo-oscuro .main-text {
+  background-color: #555 !important; 
+  color: #ddd !important;             
+}
+
+.modo-oscuro .main-footer {
+  background-color: #333 !important; 
+  color: #ccc !important;
+}
+
+.modo-oscuro .main-footer li a{
+    color: #ccc !important;
+}
+
+.modo-oscuro .second-footer {
+  background-color: #444 !important; 
+  color: #ccc !important;
+}
+
+.modo-oscuro .boton_menu{
+    color: #ccc !important;
+}
+
+.monocromo {
+    filter: grayscale(100%);
+}
+
+.alto-contraste {
+  background-color: black !important;
+  color: yellow !important;
+  font-weight: bold !important;
+}
+
+.alto-contraste .filas {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.alto-contraste .personajes {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.alto-contraste .main-text {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.alto-contraste .main-footer {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.alto-contraste .main-footer li a {
+  color: yellow !important;
+}
+
+.alto-contraste .second-footer {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.alto-contraste .submenu button {
+  background-color: black !important;
+  color: yellow !important;
+  border: 2px solid yellow !important;
+}
+
+.alto-contraste .submenu button:hover {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.alto-contraste img {
+  filter: contrast(200%) brightness(150%);
+}
+
+
+
+
+
