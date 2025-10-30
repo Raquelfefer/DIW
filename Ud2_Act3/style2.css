@@ -1,5 +1,6 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
 
 .filas {
@@ -123,6 +124,7 @@ a:link{
     display:flex;
     filter: none !important;
     z-index: 9999;
+    background-color: transparent !important;
 }
 
 .boton_menu{
@@ -157,7 +159,7 @@ a:link{
 }
 
 .modo-oscuro {
-  background-color: #222 !important;
+  background-color: #222;
   color: #fff !important;
 }
 
@@ -190,14 +192,38 @@ a:link{
 
 .modo-oscuro .boton_menu{
     color: #ccc !important;
+    background-color: transparent !important;
+}
+
+.modo-oscuro .menu_desplegable{
+  background-color: transparent !important;
 }
 
 .monocromo {
     filter: grayscale(100%);
 }
 
+.monocromo .menu_desplegable {
+    position: fixed !important;
+    display: flex !important;
+    top: 70px !important;
+    right: 10px !important;
+    z-index: 9999 !important;
+    background-color: transparent !important;
+}
+
+.monocromo button, 
+.monocromo .menu_desplegable * {
+    filter: none !important;
+} 
+
+.monocromo .boton-menu{
+  background-color: transparent !important;
+  color: grey !important;
+}
+
 .alto-contraste {
-  background-color: black !important;
+  background-color: black;
   color: yellow !important;
   font-weight: bold !important;
 }
@@ -246,6 +272,18 @@ a:link{
   filter: contrast(200%) brightness(150%);
 }
 
+.alto-contraste .boton_menu {
+  color: yellow !important;
+  background-color: transparent !important;
+}
+
+.alto-contraste .boton_menu > span.material-symbols-outlined {
+  color: yellow !important;
+}
+
+.alto-contraste .menu_desplegable{
+  background-color: transparent !important;
+}
 
 
 

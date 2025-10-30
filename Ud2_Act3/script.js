@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const botonMenu = document.querySelector('.boton_menu');
-  const submenu = document.querySelector('.submenu');
+  const botonMenu = document.getElementById('boton_menu');
+  const submenu = document.getElementById('submenu');
 
   botonMenu.addEventListener('click', () => {
     if (submenu.classList.contains('visible')) {
@@ -14,27 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const botonModoOscuro = document.querySelector('.modo_oscuro');
-  const botonAltoContraste = document.querySelector('.alto_contraste');
-  const botonMonocromo = document.querySelector('.monocromo');
-  const botonReiniciar = document.querySelector('.reiniciar');
+  const contenido = document.getElementById("content");
+  const menuDesplegable = document.querySelector(".menu_desplegable");
+
+  const botonModoOscuro = document.getElementById('modo_oscuro');
+  const botonAltoContraste = document.getElementById('alto_contraste');
+  const botonMonocromo = document.getElementById('monocromo');
+  const botonReiniciar = document.getElementById('reiniciar');
 
   botonModoOscuro.addEventListener('click', () => {
-    document.body.classList.add('modo-oscuro');
-    document.body.classList.remove('alto-contraste', 'monocromo');
+    contenido.classList.add('modo-oscuro');
+    menuDesplegable.classList.add('modo-oscuro');
+    contenido.classList.remove('alto-contraste', 'monocromo');
+    menuDesplegable.classList.remove('alto-contraste', 'monocromo');
   });
 
   botonAltoContraste.addEventListener('click', () => {
-    document.body.classList.add('alto-contraste');
-    document.body.classList.remove('modo-oscuro', 'monocromo');
+    contenido.classList.add('alto-contraste');
+    menuDesplegable.classList.add('alto-contraste');
+    contenido.classList.remove('modo-oscuro', '.monocromo');
+    menuDesplegable.classList.remove('modo-oscuro', 'monocromo');
   });
 
   botonMonocromo.addEventListener('click', () => {
-    document.body.classList.add('monocromo');
-    document.body.classList.remove('modo-oscuro', 'alto-contraste');
+    contenido.classList.add('monocromo');
+    menuDesplegable.classList.add('monocromo');
+    contenido.classList.remove('modo-oscuro', 'alto-contraste');
+    menuDesplegable.classList.remove('modo-oscuro', 'alto-contraste');
   });
 
   botonReiniciar.addEventListener('click', () => {
-    document.body.classList.remove('modo-oscuro', 'alto-contraste', 'monocromo');
+    contenido.classList.remove('modo-oscuro', 'alto-contraste', 'monocromo');
+    menuDesplegable.classList.remove('modo-oscuro','alto-contraste', 'monocromo');
   });
 });
