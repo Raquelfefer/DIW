@@ -1,0 +1,28 @@
+li a span{
+    color: green;
+}
+
+ul li{
+    display: inline-block
+}
+
+ul li{
+    padding: 10px;
+}
+
+ul li:first-child a span::after{
+    content: "INICIAR SESIÓN";
+    color: green;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+ul li:last-child a span::after{
+    content: "FAVORITOS";
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+

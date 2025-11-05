@@ -1,0 +1,35 @@
+h2 {
+    color: blue;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+#descripcion {
+    border-style: dashed;
+    border-color: burlywood; 
+    padding: 10px;
+}
+
+table tr td.oferta {
+    color: red;  
+}
+
+table tr td.novedad {
+    color: yellowgreen;
+}
+
+table tr td{
+    padding: 10px;
+}
+
+td[class] {
+    font-weight: bold;
+}
+
+form input {
+    background-color: goldenrod;
+}
+
+form input[type = "number"] {
+    font-weight: bold;
+}
