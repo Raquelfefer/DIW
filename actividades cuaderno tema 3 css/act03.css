@@ -3,24 +3,28 @@ li a span{
 }
 
 ul li{
-    display: inline-block
+    display: inline-flex;
 }
 
 ul li{
     padding: 10px;
+
 }
 
-ul li:first-child a span::after{
+ul li:first-child a::after{
     content: "INICIAR SESIÓN";
     color: green;
     font-family: 'Times New Roman', Times, serif; 
+    text-decoration: none;
 }
 
-ul li:last-child a span::after{
+ul li:last-child a::after{
     content: "FAVORITOS";
     color: green;
     font-family: 'Times New Roman', Times, serif;
 }
+
+
 
 
 
