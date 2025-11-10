@@ -1,0 +1,35 @@
+h2{
+    color: red;
+}
+
+body > h2:first-child {
+    color: green;
+}
+
+body > h2:last-child{
+    color: blue;
+}
+
+body div:last-child article:last-child h2:last-child{
+    color: yellow
+}
+
+#principal{
+    color:aqua;
+}
+
+#principal h2{
+    color:blueviolet;
+}
+
+.Articulo{
+    color:brown;
+}
+
+.Articulo h2{
+    color:chocolate;
+}
+
+#secundario article:last-child{
+    color:forestgreen;
+}
