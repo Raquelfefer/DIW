@@ -1,12 +1,17 @@
 /* resetea los estilos del navegador */
 *{margin: 0; padding: 0;}
 
-
 /* Cambia caracteristicas generales del menú */
 nav{
     background-color: #bbdb88;
-    font-size: 12px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 10px;
+}
+
+/* Todas las opciones del menú alineados */
+nav ul li{
+    display: inline;
 }
 
 /* Estilos para los enlaces */
@@ -24,4 +29,162 @@ nav ul li a:hover{
 /* Cambiar color del cuarto enlace del menu (rebajas) */
 nav ul li:nth-child(4) a {
   color: red;
+}
+
+/* El menú y las redes sociales en la misma línea */
+header nav, header #redes{
+    display: inline-flex;
+}
+
+/* Las redes sociales alineadas a la derecha */
+#redes{
+    float: right;
+    padding: 0px 10px;
+    gap: 10px;
+}
+
+/* Logo centrado */
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Quitamos el texto para que solo aparezcan los iconos */
+#redes a span{
+    display: none;
+}
+
+/* Introducimos los tres iconos de las redes sociales */
+#redes a:nth-child(1)::after{
+    content: url('../img/facebook.png');
+}
+
+#redes a:nth-child(2)::after{
+    content: url('../img/twitter.png');
+}
+
+#redes a:nth-child(3)::after{
+    content: url('../img/linkedin.png');
+}
+
+/* Margenes del banner */
+.banner{
+    width: 100%;
+    padding: 20px 0px 40px 0px;
+}
+
+/* Estilos del titulo del main */
+#main h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: black;
+}
+
+/* Estilos del texto principal */
+.principal{
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    color:#92968c;
+    font-size: 18px;
+    font-family: Arial;
+    line-height: 32px;
+}
+
+/* Tamaño de la sección productos */
+.productos{
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* Posición del contenido de productos */
+.productos ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tamaño de los contenedores de los productos */
+.productos ul li{
+    flex: 1;
+    list-style: none;
+    
+}
+
+/* Tamaño de las imagenes de los productos */
+ul li img{
+    width: 100%;
+}
+
+/* Estilos del titulo del producto */
+ul li h3{
+    text-align: center;
+    color: #292a27;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Oswald;
+    letter-spacing: 1px;
+}
+
+/* Estilos de la descripción del producto */
+ul li .desc{
+    color: black;
+    font-size: 15px;
+    font-family: Arial;
+    text-align: left;
+}
+
+ul li .prod_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li .price{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+ul li .compra{
+    background-color: #bbdb88;
+    color: white;
+    align-items: center;
+    padding: 7px;
+    text-decoration: none;
+}
+
+ul li .compra::before{
+    content: "shopping_cart";
+    font-family: 'Material Icons';
+}
+
+li span{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Oswald;
+    letter-spacing: 1px;   
+}
+
+ul li .compra:hover{
+    color: black;
+    background-color: #85b463;
+}
+
+.doble{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.doble p{
+    width: 30%;
 }
