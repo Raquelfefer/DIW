@@ -4,12 +4,12 @@ li a span{
 
 ul li{
    display: inline-flex;
-   position: relative;
    width: 160px;
 }
 
 li a{
     text-decoration: none;
+    padding-right: 100px;
 }
 
 ul li a::after{
@@ -19,8 +19,8 @@ ul li a::after{
     text-decoration: none;
     font-size: 15px;
     position:absolute;
-    left: 30px;
-    top: 7px;
+    top: 15px;
+    margin-left: 5px;
 }
 
 ul li:last-child a::after{
