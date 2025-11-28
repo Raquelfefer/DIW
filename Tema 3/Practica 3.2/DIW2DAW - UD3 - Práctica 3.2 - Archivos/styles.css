@@ -61,7 +61,6 @@ ul{
 .main{
     grid-area: main;
     background-color: lightblue;
-    
 }
 
 h1{
@@ -71,6 +70,57 @@ h1{
 
 .filtro{
     width: 750px;
+    margin: 0 auto;
+}
+
+.filtro > ul{
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+}
+
+.filtro > ul > li{
+    display: inline-flex;
+}
+
+.filtro > ul > li > a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: goldenrod;
+    padding: 4px;
+}
+
+.filtro > ul > li > .selected{
+    background-color: black;
+}
+
+.filtro > ul > li > a:hover{
+    background-color: black;
+    color: goldenrod;
+}
+
+.marcas{
+    width: 750px;
+    margin: 0 auto;
+    height: 400px;
+    padding: 5px;
+}
+
+.marcas > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+}
+
+.marcas > ul > li{
+    background-color: #eee;
+    border-radius: 16px;
+    padding: 6px;
 }
 
 footer{
