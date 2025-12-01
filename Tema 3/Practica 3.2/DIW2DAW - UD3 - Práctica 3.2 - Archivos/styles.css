@@ -7,6 +7,7 @@ body{
     "menu main"
     "footer footer";
     grid-template-columns: 260px auto;
+    grid-template-rows: 130px auto 40px;
 }
 
 nav{
@@ -22,7 +23,6 @@ ul{
 .cabecera{
     grid-area: header;
     background-color: goldenrod;
-    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ ul{
 
 .main{
     grid-area: main;
-    background-color: lightblue;
+    margin: 0 260px 0 0;
 }
 
 h1{
@@ -104,7 +104,7 @@ h1{
     width: 750px;
     margin: 0 auto;
     height: 400px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .marcas > ul {
@@ -123,10 +123,25 @@ h1{
     padding: 6px;
 }
 
+.marcas > ul > .nostock{
+    color: #ddd;
+}
+
+.marcas > ul > li:hover{
+    background-color: goldenrod;
+    color: gold;
+    cursor: default;
+}
+
+.marcas > ul > .nostock:hover{
+    background-color: #eee;
+    color: #ddd;
+    cursor: not-allowed;
+}
+
 footer{
     grid-area: footer;
     background-color: goldenrod;
-    height: 40px;
     font-size: 12px;
     color: white;
     display: flex;
