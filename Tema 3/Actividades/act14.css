@@ -1,0 +1,97 @@
+body{
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1540px;
+    width: 100%;
+}
+
+.row{
+    padding: 0px 30px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.row > div{
+    width: 50%;
+}
+
+.htmlblock > div{
+    width: 100%;
+}
+
+div > img{
+    width: 100%;
+    height: 100%;
+}
+
+.htmlblock{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background-color: rgb(250, 192, 45);
+    text-align: center;
+}
+
+.innerblock div:first-child{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.title{
+    font-family: Times New Roman;
+    font-size: 40px;
+    margin: 10px 0px 40px 0px;
+}
+
+.enlace{
+    border: 1px black solid;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.enlace:hover{
+    background-color: black;
+    color: rgb(250, 192, 45);
+}
+
+@media (max-width: 768px){
+    
+    .row{
+        display: flex;
+        flex-direction: column;
+    }  
+
+    .row > div{
+        width: 100%;
+    }
+
+    .row:first-child > div:nth-child(1){
+        order: 2;
+    }
+
+    .row:first-child > div:nth-child(2){
+        order: 1;
+    }
+
+    .htmlblock{
+        height: 100vw;
+    }
+
+    div > img{
+        display: block;
+    }
+
+}

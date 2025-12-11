@@ -1,0 +1,24 @@
+body{
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "encabezado"
+    "perfil"
+    "galeria"
+    "main"
+    "footer";
+    grid-template-rows: 200px 1fr 150px;
+}
+
+
+
+header{
+    text-align: center;
+    background-color: rgb(66, 66, 66);
+    grid-area: encabezado;
+}
+
+
+footer{
+    grid-area: footer;
+}
