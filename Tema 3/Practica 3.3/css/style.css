@@ -288,17 +288,23 @@ footer > div:last-child{
 header{
     display: flex;
     flex-wrap: wrap; 
-    align-items: center;
+    align-items: flex-end;
     height: auto; 
-    padding-bottom: 10px;;
+    padding-bottom: 0;
 }
 
 #logo{
     order: 1;
     width: 50%;
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
     box-sizing: border-box;
+}
+
+#logo img{
+    max-width: 100%;
+    height: auto;
 }
 
 #redes {
@@ -307,17 +313,124 @@ header{
     float: none; 
     display: flex;
     justify-content: flex-end; 
-    padding-right: 10px;
+    padding-right: 20px;
     box-sizing: border-box;
-    }
+}
 
 nav {
     order: 3;
     width: 100%;
     text-align: center;
     margin-top: 15px; 
-    padding: 10px 0;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-size: 4vw;
 }
-    
+
+nav ul li a{
+    margin: 0 3px;
+}   
+
+.banner{
+    padding: 10px 0px 25px 0px;
+}
+
+#main h1{
+    font-size: 28px;
+}
+
+.principal{
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.principal p{
+    margin-bottom: 20px;
+}
+
+.productos{
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.productos ul{
+    flex-direction: column;
+}
+
+.productos ul li{
+    width: 100%;
+}
+
+ul li h3{
+    font-size: 14px;
+}
+
+ul li .price{
+    font-size: 18px;
+}
+
+ul li span{
+    font-size: 14px;
+}
+
+.doble{
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.doble p{
+    width: 100%;
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.doble p::first-letter{
+    color: red;
+    font-size: 24px;
+}
+
+.footer_links{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column{
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_links .column h4, .column ul{
+    width: 100%;
+    max-width: 250px;
+    text-align: left;
+}
+
+.footer_links .column h4{
+    font-size: 14px;
+}
+
+.column ul li a{
+    font-size: 14px;
+}
+
+.column ul li:last-child{
+    margin: 10px 0;
+}
+
+.column ul li:nth-child(2){
+    margin-top: 25px;
+}
+
+footer > div:last-child{
+    font-size: 12px;
+}
 
 }
+
