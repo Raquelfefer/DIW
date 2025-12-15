@@ -1,0 +1,323 @@
+/* resetea los estilos del navegador */
+*{margin: 0; padding: 0;}
+
+/* Cambia caracteristicas generales del menú */
+nav{
+    background-color: #bbdb88;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 10px;
+}
+
+/* Todas las opciones del menú alineados */
+nav ul li{
+    display: inline;
+}
+
+/* Estilos para los enlaces */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 5px;
+}
+
+/* Estilos para los enlaces al pasar el ratón por encima */
+nav ul li a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+/* Cambiar color del cuarto enlace del menu (rebajas) */
+nav ul li:nth-child(4) a {
+  color: red;
+}
+
+/* El menú y las redes sociales en la misma línea */
+header nav, header #redes{
+    display: inline-flex;
+}
+
+/* Las redes sociales alineadas a la derecha */
+#redes{
+    float: right;
+    padding: 0px 10px;
+    gap: 10px;
+}
+
+/* Logo centrado */
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Quitamos el texto para que solo aparezcan los iconos */
+#redes a span{
+    display: none;
+}
+
+/* Introducimos los tres iconos de las redes sociales */
+#redes a:nth-child(1)::after{
+    content: url('../img/facebook.png');
+}
+
+#redes a:nth-child(2)::after{
+    content: url('../img/twitter.png');
+}
+
+#redes a:nth-child(3)::after{
+    content: url('../img/linkedin.png');
+}
+
+/* Margenes del banner */
+.banner{
+    padding: 20px 0px 40px 0px;
+}
+
+/* Ancho de la imagen del banner */
+.banner img{
+    width: 100%;
+}
+
+/* Estilos del titulo del main */
+#main h1{
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: black;
+}
+
+/* Estilos del texto principal */
+.principal, .doble p{
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: justify;
+    color:#92968c;
+    font-size: 18px;
+    font-family: Arial;
+    line-height: 32px;
+}
+
+/* Tamaño de la sección productos */
+.productos{
+    margin: 30px auto;
+    max-width: 1400px;
+}
+
+/* Posición del contenido de productos */
+.productos ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tamaño de los contenedores de los productos */
+.productos ul li{
+    flex: 1;
+    list-style: none;
+}
+
+/* Tamaño de las imagenes de los productos */
+ul li img{
+    width: 100%;
+}
+
+/* Estilos del titulo del producto */
+ul li h3{
+    text-align: center;
+    color: #292a27;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Oswald;
+    letter-spacing: 1px;
+}
+
+/* Estilos de la descripción del producto */
+ul li .desc{
+    color: black;
+    font-size: 15px;
+    font-family: Arial;
+    text-align: left;
+}
+
+/* Estilo para la parte baja del producto que contiene el precio y el botón */
+ul li .prod_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Estilo del precio de cada producto */
+ul li .price{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+/* Estilo del botón de compra */
+ul li .compra{
+    background-color: #bbdb88;
+    color: white;
+    align-items: center;
+    padding: 7px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Añadir el icono del carrito de la compra */
+ul li .compra::before{
+    content: "shopping_cart";
+    font-family: 'Material Icons';
+}
+
+/* Estilo para el texto del botón de compra */
+li span{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Oswald;
+    letter-spacing: 1px;   
+}
+
+/* Estilo del boton de compra cuando se pasa el ratón por encima */
+ul li .compra:hover{
+    color: black;
+    background-color: #85b463;
+}
+
+/* Estilo del bloque que contiene los dos párrafos */
+.doble{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 40px 15%;
+}
+
+/* Ancho de cada párrafo */
+.doble p{
+    width: 30%;
+}
+
+/* Estilo de la primera letra de cada párrafo */
+.doble p::first-letter{
+    color: black;
+    font-size: 30px;
+    font-family: Oswald;
+}
+
+/* Estilos del footer */
+footer{
+    background-color: #bbdb88;
+    width: 100%;
+    display: flexbox;
+    padding: 20px 0px 0px 0px;
+}
+
+/* Colocación de los bloques con enlaces que forman el footer */
+.footer_links{
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    max-width: 1400px;
+}
+
+/* Estilos para los títulos de los bloques del footer */
+.footer_links .column h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: Oswald;
+    color: white;
+}
+
+/* Quitar los puntos de las listas */
+.column ul li{
+    list-style: none;
+}
+
+/* Estilo de los enlaces */
+.column ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+/* Cambiar el estilo de los enlaces cuando se pasa el ratón por encima */
+.column ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+/* Cambiar el color de los enlaces una vez visitados */
+.column ul li a:visited{
+    color: grey;
+}
+
+/* Dejar espacio entre los elementos de los bloques del footer */
+.column ul li{
+    margin: 10px 0px;
+}
+
+/* Darle más espacio al último enlace */
+.column ul li:last-child{
+    margin: 15px 0px;
+}
+
+/* Estilos del último hijo del bloque footer */
+footer > div:last-child{
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    font-family: Arial;
+}
+
+@media (max-width: 768px){
+
+header{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    height: auto; 
+    padding-bottom: 10px;;
+}
+
+#logo{
+    order: 1;
+    width: 50%;
+    justify-content: flex-start;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#redes {
+    order: 2;
+    width: 50%;
+    float: none; 
+    display: flex;
+    justify-content: flex-end; 
+    padding-right: 10px;
+    box-sizing: border-box;
+    }
+
+nav {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px; 
+    padding: 10px 0;
+}
+    
+
+}
