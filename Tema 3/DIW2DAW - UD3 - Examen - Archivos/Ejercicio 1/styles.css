@@ -1,0 +1,90 @@
+body{
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "columnaIz header columnaDe"
+    "columnaIz main columnaDe"
+    "columnaIz footer columnaDe";
+    grid-template-rows: 100px auto 80px;
+    grid-template-columns: 60px auto 60px;
+    font-family: Cambria;
+    background-color: white;
+    color: #2e3532;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    font-weight: bold;
+    color: #8b2635;
+}
+
+header > h1{
+    font-size: 2.5em;
+}
+
+.left-column{
+    grid-area: columnaIz;
+    background-color: #2e3532;
+}
+
+.right-column{
+    grid-area: columnaDe;
+    background-color: #2e3532;
+}
+
+main{
+    grid-area: main;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    padding: 20px;
+    max-width: 850px;
+    background-color: palegoldenrod;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.plato{
+    border: 4px #8b2635 solid;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.plato > img{
+    width: 100%;
+}
+
+.plato-info{
+    padding: 15px;
+}
+
+.nombre{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.precio{
+    font-size: 1.2em;
+    color: #8b2635;
+    font-weight: bold;
+}
+
+.ingredientes{
+    font-size: 0.9em;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #2e3532;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+}
