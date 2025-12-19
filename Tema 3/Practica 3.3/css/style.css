@@ -285,39 +285,178 @@ footer > div:last-child{
 
 @media (max-width: 768px){
 
+/* Cambiar el estilo del encabezado  */
 header{
     display: flex;
     flex-wrap: wrap; 
-    align-items: center;
+    align-items: flex-end;
     height: auto; 
-    padding-bottom: 10px;;
+    padding-bottom: 0;
 }
 
+/* Logo en primer orden con un ancho de la mitad de la página y a la izquierda */
 #logo{
     order: 1;
     width: 50%;
     justify-content: flex-start;
-    padding-left: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
     box-sizing: border-box;
 }
 
+/* Ancho de la imagen maximo con tamaño auto para que vaya disminuyendo */
+#logo img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Redes sociales en segundo orden con un ancho de la mitad de la página a la derecha */
 #redes {
     order: 2;
     width: 50%;
     float: none; 
     display: flex;
     justify-content: flex-end; 
-    padding-right: 10px;
+    padding-right: 20px;
     box-sizing: border-box;
-    }
+}
 
+/* Navegador ocupando el 100% de la pagina con margenes arriba y abajo y letra con tamaño adaptado */
 nav {
     order: 3;
     width: 100%;
     text-align: center;
     margin-top: 15px; 
-    padding: 10px 0;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-size: 4vw;
 }
-    
+
+nav ul li a{
+    margin: 0 3px;
+}   
+
+/* Margnes del banner */
+.banner{
+    padding: 10px 0px 25px 0px;
+}
+
+/* Tamaño de letra del texto del cuerpo principal */
+#main h1{
+    font-size: 28px;
+}
+
+/* Tamaño máximo del cuerpo principal, tamaño de letra e interlineado cambiado */
+.principal{
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* Margen inferior para los p de la parte principal */
+.principal p{
+    margin-bottom: 20px;
+}
+
+/* Padding derecho e izquierdo para los productos */
+.productos{
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Cambiar el orden de aparición de los productos de fila a columna */
+.productos ul{
+    flex-direction: column;
+}
+
+/* Ancho de los productos */
+.productos ul li{
+    width: 100%;
+}
+
+/* Tamaño cambiado del titulo del producto */
+ul li h3{
+    font-size: 14px;
+}
+
+/* Tamaño cambiado del precio */
+ul li .price{
+    font-size: 18px;
+}
+
+/* Tamaño cambiado del enlace */
+ul li span{
+    font-size: 14px;
+}
+
+/* Dirección cambiada a columna para los parrafos dobles con margenes arriba y abajo */
+.doble{
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+/* Tamaño máximo de los párrafos, tamaño de fuente, interlineado y margen inferior */
+.doble p{
+    width: 100%;
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+/* Primera letra de cada parrafo cambiado a rojo y con tamaño de letra diferente */
+.doble p::first-letter{
+    color: red;
+    font-size: 24px;
+}
+
+/* Cambiar dirección de aparición de los link del footer a columna en vez de fila, separación entre ellos con gap */
+.footer_links{
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para las columnas */
+.column{
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Centrado del contenido de los enlaces */
+.footer_links .column h4, .column ul{
+    width: 100%;
+    max-width: 250px;
+    text-align: left;
+}
+
+/* Tamaño del título */
+.footer_links .column h4{
+    font-size: 14px;
+}
+
+/* Tamaño de los enlaces */
+.column ul li a{
+    font-size: 14px;
+}
+
+/* Margen reseteado del último hijo */
+.column ul li:last-child{
+    margin: 10px 0;
+}
+
+/* Margen añadido al segundo hijo */
+.column ul li:nth-child(2){
+    margin-top: 25px;
+}
+
+/* Tamaño de letra cambiado para la firma */
+footer > div:last-child{
+    font-size: 12px;
+}
 
 }
+
