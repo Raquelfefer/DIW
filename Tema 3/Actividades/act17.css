@@ -1,0 +1,16 @@
+<style>
+        /* NOTA PARA EL ALUMNO:
+           Aunque Bootstrap maneja casi todo, a veces necesitamos asegurar que las imágenes de origen externo tengan la misma altura para no romper el layout.
+           En un entorno real, usaríamos imágenes cortadas al mismo tamaño.
+        */
+        .carousel-item img {
+            height: 600px;
+            object-fit: cover;
+        }
+
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
