@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Home</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme {
+            /* Fuentes */
+            --font-sans: 'Outfit', sans-serif;
+
+            /* Colores Personalizados */
+            --color-primary-50: #eff6ff;
+            --color-primary-100: #dbeafe;
+            --color-primary-500: #3b82f6;
+            --color-primary-600: #2563eb;
+            --color-primary-700: #1d4ed8;
+            --color-accent: #06b6d4;
+
+            /* Animaciones */
+            --animate-float: float 6s ease-in-out infinite;
+            --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            --animate-gradient-x: gradient-x 15s ease infinite;
+
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+            
+            @keyframes gradient-x {
+                0%, 100% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+            }
+        }
+
+            /* Configuración de variante Dark para v4 */
+            @variant dark (&:where(.dark, .dark *));
+
+            /* Utilities personalizadas */
+            .preserve-3d { transform-style: preserve-3d; }
+            .backface-hidden { backface-visibility: hidden; }
+            .rotate-y-180 { transform: rotateY(180deg); }
+
+            /* Scrollbar */
+            ::-webkit-scrollbar { width: 8px; }
+            ::-webkit-scrollbar-track { background: #f1f1f1; }
+            ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+            :root.dark ::-webkit-scrollbar-track { background: #0f172a; }
+            :root.dark ::-webkit-scrollbar-thumb { background: #334155; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-sans antialiased overflow-x-hidden">
+
+    <nav id="navbar" class="fixed w-full z-50 top-0 py-4 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+            
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent rounded-lg flex items-center justify-center text-white group-hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <span class="font-bold text-2xl dark:text-white tracking-tight">
+                    Nexus<span class="text-primary-500">Home</span>
+                </span>
+            </a>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="relative flex items-center justify-center w-10 h-10 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer overflow-hidden border border-slate-200 dark:border-slate-700">
+                    <span class="dark:hidden flex text-slate-900">
+                        <i class="fa-solid fa-moon text-lg"></i>
+                    </span>
+                    <span class="hidden dark:flex text-white">
+                        <i class="fa-solid fa-sun text-lg"></i>
+                    </span>
+                </button>
+
+                <button class="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2 rounded-full font-semibold transition-all hidden sm:block text-sm">
+                    Reservar Ahora
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 px-4 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-bold tracking-wide uppercase">
+                    <i class="fa-solid fa-circle text-[6px] mr-2"></i> 
+                    Lanzamiento 19 de Enero
+                </span>
+                <h1 class="text-6xl md:text-7xl font-extrabold leading-tight">
+                    Tu hogar, <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 via-accent to-primary-500 animate-gradient-x bg-[length:200%_auto]">
+                        Gestionado por IA
+                    </span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed">
+                    Nexus Home no es solo un robot, es el fin de las tareas domésticas. Limpieza, cocina y seguridad integrados en un diseño humanoide elegante.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-2xl font-bold flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary-500/25">
+                        Descubrir características <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button class="px-8 py-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                        <i class="fa-solid fa-play"></i> Ver Demo
+                    </button>
+                </div>
+                <div class="grid grid-cols-3 gap-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="text-3xl font-bold text-slate-900 dark:text-white">50h+</div>
+                        <div class="text-sm text-slate-500">Batería</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-slate-900 dark:text-white">AI</div>
+                        <div class="text-sm text-slate-500">GPT-5 Core</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-slate-900 dark:text-white">0%</div>
+                        <div class="text-sm text-slate-500">Quejas</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end perspective-[1000px] group">
+                <div class="relative w-[350px] h-[500px] transition-all duration-700 preserve-3d group-hover:rotate-y-180 cursor-pointer">
+                    
+                    <div class="absolute inset-0 backface-hidden rounded-[2rem] bg-white shadow-2xl overflow-hidden border border-slate-200">
+                        <img src="images/slide1.jpg" class="w-full h-3/4 object-cover">
+                        <div class="p-6 flex items-center justify-center h-1/4">
+                            <h3 class="text-2xl font-bold text-slate-800">Nexus Model X</h3>
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[2rem] bg-[#05162d] p-10 flex flex-col items-center justify-center border border-blue-500/20 shadow-2xl">
+                        
+                        <div class="text-cyan-400 text-6xl mb-4">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-6 text-white">Especificaciones</h3>
+
+                        <ul class="space-y-4 w-full">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <i class="fa-solid fa-check text-blue-500"></i> Procesador Neural Q3
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <i class="fa-solid fa-check text-blue-500"></i> Aleación de Titanio
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <i class="fa-solid fa-check text-blue-500"></i> Reconocimiento Facial
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <i class="fa-solid fa-check text-blue-500"></i> Carga Inalámbrica
+                            </li>
+                        </ul>
+
+                        <button class="mt-10 w-full py-3 bg-white text-slate-950 rounded-full font-extrabold text-xs uppercase tracking-tight hover:bg-slate-100 transition-colors">
+                            Ver Ficha Técnica
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Ingeniería para la vida real</h2>
+            <p class="text-slate-500">Diseñado para adaptarse a cualquier entorno doméstico.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[600px]">
+            <div class="md:col-span-2 md:row-span-2 relative rounded-[2.5rem] overflow-hidden group border border-slate-200 dark:border-slate-800">
+                <img src="images/asistencia_total.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent p-10 flex flex-col justify-end">
+                    <h3 class="text-white text-4xl font-bold mb-2">Asistencia Total</h3>
+                    <p class="text-slate-300 max-w-md">Desde doblar la ropa hasta preparar café. Nexus aprende tus hábitos.</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 bg-[#0a192f] dark:bg-[#0a192f] rounded-[2rem] p-10 shadow-xl border border-slate-800 flex flex-col justify-center gap-6 group hover:border-primary-500/50 transition-colors">
+    
+                <div class="w-14 h-14 rounded-full bg-cyan-950 flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-cyan-400 text-2xl"></i>
+                </div>
+
+                <div>
+                    <h3 class="text-3xl font-bold mb-4 text-white">Seguridad 24/7</h3>
+                    
+                    <p class="text-slate-400 leading-relaxed text-lg">
+                        Monitoreo activo de tu hogar mientras duermes o estás fuera. Conexión directa con servicios de emergencia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="rounded-[2rem] bg-gradient-to-br from-blue-600 to-blue-900 p-8 text-white flex flex-col justify-between h-full group hover:shadow-2xl hover:shadow-blue-500/30 transition-all cursor-pointer border border-white/10">
+                <i class="fa-solid fa-wifi text-3xl"></i>
+                <div>
+                    <h3 class="text-2xl font-bold">IoT Connect</h3>
+                    <p class="text-blue-100/80 text-base mt-2">Controla todas tus luces y termostatos.</p>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] bg-[#0a192f] p-8 text-white flex flex-col justify-between h-full group border border-slate-800 transition-all cursor-pointer">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/20 blur-[50px] rounded-full"></div>
+
+                <i class="fa-solid fa-battery-full text-3xl text-green-500"></i>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">Auto-Carga</h3>
+                    <p class="text-slate-400 text-base mt-2">Regresa a su base solo.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="vision" class="py-24 bg-slate-100 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold mb-6">Modos de Visión <span class="text-accent">Adaptativa</span></h2>
+                <p class="text-slate-500 mb-8 leading-relaxed">
+                    Los sensores de Nexus pueden cambiar su percepción para detectar suciedad, calor o movimiento en la oscuridad. 
+                </p>
+                
+                <div class="space-y-4">
+                    <div onmouseenter="applyFilter('grayscale(100%) brightness(1.2)')" onmouseleave="applyFilter('none')" class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer hover:border-primary-500 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-slate-600 group-hover:bg-primary-500 group-hover:text-white transition-colors"><i class="fa-solid fa-ghost"></i></div>
+                            <div>
+                                <h4 class="font-bold">Modo Ahorro</h4>
+                                <p class="text-sm text-slate-500">Desactiva el procesamiento de color</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseenter="applyFilter('sepia(1) hue-rotate(320deg) saturate(3)')" onmouseleave="applyFilter('none')" class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer hover:border-orange-500 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors"><i class="fa-solid fa-eye-low-vision"></i></div>
+                            <div>
+                                <h4 class="font-bold">Modo Nocturno Cálido</h4>
+                                <p class="text-sm text-slate-500">Reduce la luz azul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div onmouseenter="applyFilter('blur(10px)')" onmouseleave="applyFilter('none')" class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 cursor-pointer hover:border-red-500 transition-all group">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center text-red-600 group-hover:bg-red-500 group-hover:text-white transition-colors"><i class="fa-solid fa-lock"></i></div>
+                            <div>
+                                <h4 class="font-bold">Modo Privacidad</h4>
+                                <p class="text-sm text-slate-500">Desenfoca rostros y textos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+                <img id="robot-vision" src="images/seguridad-24-7.jpg" class="w-full aspect-square object-cover transition-all duration-500 ease-out" alt="Robot Vision">
+    
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-black/60 backdrop-blur-md py-3 px-6 rounded-2xl flex justify-between items-center border border-white/10">
+                    <span class="text-cyan-400 text-xs font-mono font-bold tracking-widest uppercase">
+                        System: Online
+                    </span>
+                    <span class="text-white text-xs font-mono font-bold">
+                        BAT: 98%
+                    </span>
+                </div>
+            </div>
+    </section>
+
+    <section id="pricing" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Elige tu Nexus</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold mb-2">Nexus Lite</h3>
+                <div class="text-4xl font-extrabold mb-6">1.999€</div>
+                <ul class="space-y-4 mb-8 text-slate-500 dark:text-slate-400">
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Limpieza de suelos</li>
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Seguridad Básica</li>
+                    <li class="line-through opacity-50"><i class="fa-solid fa-xmark mr-2"></i> Cocina</li>
+                </ul>
+                <button class="w-full py-4 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Reservar</button>
+            </div>
+            <div class="bg-slate-900 dark:bg-primary-950 p-8 rounded-[2.5rem] border-4 border-primary-500 relative hover:scale-105 transition-all duration-300 shadow-2xl shadow-primary-500/20">
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Más Popular</span>
+                <h3 class="text-xl font-bold mb-2 text-white">Nexus Home</h3>
+                <div class="text-4xl font-extrabold mb-6 text-white">3.499€</div>
+                <ul class="space-y-4 mb-8 text-slate-300">
+                    <li><i class="fa-solid fa-check text-primary-400 mr-2"></i> Todo lo de Lite</li>
+                    <li><i class="fa-solid fa-check text-primary-400 mr-2"></i> Cocina (Recetas básicas)</li>
+                    <li><i class="fa-solid fa-check text-primary-400 mr-2"></i> Cuidado de mascotas</li>
+                    <li><i class="fa-solid fa-check text-primary-400 mr-2"></i> Voz natural (GPT-5)</li>
+                </ul>
+                <button class="w-full py-4 bg-gradient-to-r from-primary-500 to-accent text-white rounded-2xl font-bold hover:brightness-110 transition-all shadow-lg shadow-primary-500/50">Comprar Ahora</button>
+            </div>
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 hover:scale-105 transition-all duration-300">
+                <h3 class="text-xl font-bold mb-2">Nexus Ultra</h3>
+                <div class="text-4xl font-extrabold mb-6">5.999€</div>
+                <ul class="space-y-4 mb-8 text-slate-500 dark:text-slate-400">
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Acabado en Titanio</li>
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Cocina Gourmet</li>
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Cuidado de mascotas</li>
+                    <li><i class="fa-solid fa-check text-primary-500 mr-2"></i> Jardinería</li>
+                </ul>
+                <button class="w-full py-4 border border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">Contactar Ventas</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-8 h-8 bg-primary-500 rounded flex items-center justify-center text-white"><i class="fa-solid fa-robot"></i></div>
+                    <span class="font-bold text-xl">Nexus</span>
+                </div>
+                <p class="text-slate-500 text-sm">Creando el futuro de la automatización doméstica desde 2026.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-white text-lg">Producto</h4>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Características</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Modelos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Accesorios</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-white text-lg">Soporte</h4>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Manuales</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Garantía</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-white text-lg">Legal</h4>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-primary-500 transition-colors duration-300">Términos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-100 dark:border-slate-900 flex justify-between items-center text-slate-400 text-xs">
+            <p>© 2026 Nexus Robotics. Todos los derechos reservados.</p>
+            <div class="flex gap-4 text-lg">
+                <i class="fa-brands fa-twitter hover:text-primary-500 cursor-pointer"></i>
+                <i class="fa-brands fa-instagram hover:text-primary-500 cursor-pointer"></i>
+                <i class="fa-brands fa-linkedin hover:text-primary-500 cursor-pointer"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function applyFilter(filterValue) {
+            document.getElementById('robot-vision').style.filter = filterValue;
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+ 
+        // Lógica de carga del tema
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Evento de click para cambiar tema
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // Evento Scroll para el Navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('py-2', 'shadow-lg');
+                    navbar.classList.remove('py-4');
+                } else {
+                    navbar.classList.add('py-4');
+                    navbar.classList.remove('py-2', 'shadow-lg');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
