@@ -128,7 +128,12 @@
                 <div class="relative w-[350px] h-[500px] transition-all duration-700 preserve-3d group-hover:rotate-y-180 cursor-pointer">
                     
                     <div class="absolute inset-0 backface-hidden rounded-[2rem] bg-white shadow-2xl overflow-hidden border border-slate-200">
-                        <img src="images/slide1.jpg" class="w-full h-3/4 object-cover">
+                        <div class="relative w-full h-3/4 bg-slate-300 dark:bg-slate-700 animate-pulse" id="skeleton-container">
+                            <img src="images/slide1.jpg" 
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in" 
+                                onload="this.classList.remove('opacity-0'); document.getElementById('skeleton-container').classList.remove('animate-pulse')"
+                                alt="Nexus Model X">
+                        </div>
                         <div class="p-6 flex items-center justify-center h-1/4">
                             <h3 class="text-2xl font-bold text-slate-800">Nexus Model X</h3>
                         </div>
@@ -397,11 +402,11 @@
             const navbar = document.getElementById('navbar');
             if (navbar) {
                 if (window.scrollY > 50) {
-                    navbar.classList.add('py-2', 'shadow-lg');
-                    navbar.classList.remove('py-4');
+                    navbar.classList.add('py-2', 'shadow-lg', 'border-primary-500', 'dark:border-primary-500');
+                    navbar.classList.remove('py-4', 'border-slate-200', 'dark:border-slate-800');
                 } else {
-                    navbar.classList.add('py-4');
-                    navbar.classList.remove('py-2', 'shadow-lg');
+                    navbar.classList.add('py-4', 'border-slate-200', 'dark:border-slate-800');
+                    navbar.classList.remove('py-2', 'shadow-lg', 'border-primary-500', 'dark:border-primary-500');
                 }
             }
         });
