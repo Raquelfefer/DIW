@@ -1,0 +1,32 @@
+nav {
+    background-color: $color-primario; 
+    font-size: 20px;
+    font-family: $fuente-arial;
+    padding: 2px 10px;
+
+    ul {
+        display: flex; 
+        align-items: center; 
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline;
+            
+            a {
+                text-decoration: none;
+                color: white;
+                margin: 0px 5px;
+
+                &:hover {
+                    color: $color-negro;
+                    text-decoration: underline;
+                }
+            }
+
+            &:nth-child(4) a {
+                color: red; 
+            }
+        }
+    }
+}

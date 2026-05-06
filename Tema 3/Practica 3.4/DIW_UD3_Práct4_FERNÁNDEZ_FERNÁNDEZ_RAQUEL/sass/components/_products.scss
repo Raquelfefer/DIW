@@ -1,0 +1,48 @@
+.productos {
+    margin: 30px auto;
+    max-width: 1400px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        li {
+            flex: 1;
+            list-style: none;
+
+            img { width: 100%; }
+
+            h3 {
+                text-align: center;
+                color: #292a27; 
+                font-weight: bold;
+                font-size: 15px;
+                font-family: $fuente-oswald; 
+                letter-spacing: 1px;
+            }
+
+            .desc {
+                color: black;
+                font-size: 15px;
+                font-family: $fuente-arial; 
+                text-align: left;
+            }
+
+            .prod_bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+
+                .price {
+                    color: black;
+                    font-weight: bold;
+                    font-size: 20px;
+                    font-family: $fuente-arial; 
+                }
+            }
+        }
+    }
+}

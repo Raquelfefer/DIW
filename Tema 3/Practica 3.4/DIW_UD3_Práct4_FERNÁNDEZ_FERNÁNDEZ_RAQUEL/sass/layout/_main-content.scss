@@ -1,0 +1,45 @@
+#main {
+    h1 {
+        text-align: center;
+        color: $color-negro;
+    }
+
+    .banner {
+        padding: 20px 0 40px 0;
+        img {
+            width: 100%;
+        }
+    }
+
+    .principal {
+        margin: 0 auto;
+        max-width: 800px;
+        text-align: justify;
+        color: $color-texto;
+    }
+
+    .doble {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        box-sizing: border-box; 
+        padding: 40px 15%;
+        p {
+            width: 30%;
+            margin: 0 auto; 
+            text-align: justify; 
+            line-height: 32px; 
+            color: $color-texto;
+            font-family: $fuente-arial;
+            font-size: 18px;
+
+            &::first-letter {
+                color: $color-negro;
+                font-size: 30px;
+                font-family: $fuente-oswald;
+            }
+        }
+    }
+}

@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+header #logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+header nav, header #redes {
+  display: inline-flex;
+  vertical-align: middle;
+}
+header #redes {
+  float: right;
+  padding: 0px 10px;
+  gap: 10px;
+}
+header #redes a span {
+  display: none;
+}
+header #redes a:nth-child(1)::after {
+  content: url("../img/facebook.png");
+}
+header #redes a:nth-child(2)::after {
+  content: url("../img/twitter.png");
+}
+header #redes a:nth-child(3)::after {
+  content: url("../img/linkedin.png");
+}
+
+footer {
+  background-color: #bbdb88;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+footer .footer_links {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1400px;
+}
+footer .footer_links .column h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+footer .footer_links .column ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+footer .footer_links .column ul li:last-child {
+  margin: 15px 0;
+}
+footer .footer_links .column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer .footer_links .column ul li a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+footer .footer_links .column ul li a:visited {
+  color: grey;
+}
+footer > div:last-child {
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main h1 {
+  text-align: center;
+  color: #000000;
+}
+#main .banner {
+  padding: 20px 0 40px 0;
+}
+#main .banner img {
+  width: 100%;
+}
+#main .principal {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: justify;
+  color: #92968c;
+}
+#main .doble {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 40px 15%;
+}
+#main .doble p {
+  width: 30%;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 32px;
+  color: #92968c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+#main .doble p::first-letter {
+  color: #000000;
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
+}
+
+nav {
+  background-color: #bbdb88;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px 10px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 0px 5px;
+}
+nav ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+nav ul li:nth-child(4) a {
+  color: red;
+}
+
+.compra {
+  background-color: #bbdb88;
+  color: white;
+  padding: 7px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+.compra::before {
+  content: "shopping_cart";
+  font-family: "Material Icons";
+  margin-right: 5px;
+}
+.compra:hover {
+  color: #000000;
+  background-color: #85b463;
+}
+.compra span {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+
+.productos {
+  margin: 30px auto;
+  max-width: 1400px;
+}
+.productos ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.productos ul li {
+  flex: 1;
+  list-style: none;
+}
+.productos ul li img {
+  width: 100%;
+}
+.productos ul li h3 {
+  text-align: center;
+  color: #292a27;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+.productos ul li .desc {
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+.productos ul li .prod_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.productos ul li .prod_bottom .price {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}

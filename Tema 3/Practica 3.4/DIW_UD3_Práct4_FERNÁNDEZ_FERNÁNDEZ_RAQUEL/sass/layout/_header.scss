@@ -1,0 +1,27 @@
+header {
+    #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    nav, #redes {
+        display: inline-flex; 
+        vertical-align: middle;
+    }
+
+    #redes {
+        float: right; 
+        padding: 0px 10px;
+        gap: 10px;
+
+        a {
+            span { display: none; } 
+
+            &:nth-child(1)::after { content: url('../img/facebook.png'); }
+            &:nth-child(2)::after { content: url('../img/twitter.png'); }
+            &:nth-child(3)::after { content: url('../img/linkedin.png'); }
+        }
+    }
+}
