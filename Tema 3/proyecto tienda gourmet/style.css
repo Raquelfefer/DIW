@@ -1,11 +1,11 @@
 /* VARIABLES DE DISEÑO BASADAS EN GUÍA DE ESTILOS */
 :root {
-    --color-principal: #455512; /* Verde Oliva [cite: 118] */
-    --color-secundario-1: #966625; /* Dorado/Marrón [cite: 120] */
-    --color-secundario-2: #694f00; /* Oro viejo [cite: 120] */
-    --font-titulos: 'Cormorant SC', serif; /* [cite: 125] */
-    --font-textos: 'Cormorant Garamond', serif; /* [cite: 127] */
-    --blanco-roto: #fffff5; /* Blanco roto [cite: 119] */
+    --color-principal: #455512; /* Verde Oliva */
+    --color-secundario-1: #966625; /* Dorado/Marrón*/
+    --color-secundario-2: #694f00; /* Oro viejo */
+    --font-titulos: 'Cormorant SC', serif; 
+    --font-textos: 'Cormorant Garamond', serif;
+    --blanco-roto: #fffff5; /* Blanco roto */
     --gris-claro: #f4f4f4;
 }
 
@@ -23,17 +23,16 @@ body {
     background-color: var(--blanco-roto);
 }
 
-/* CABECERA [cite: 23-27] */
-/* CABECERA UNIFICADA [cite: 23, 70, 81] */
+/* CABECERA */
 .header {
     background-color: var(--blanco-roto);
     border-bottom: 2px solid var(--color-principal);
-    padding: 0.5rem 3% 0.5rem 3%; /* El tercer valor es el padding inferior */
+    padding: 0.5rem 3% 0.5rem 3%; 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* CAMBIO: De center a flex-end para que bajen al borde */
+    align-items: flex-end; 
     width: 100%;
-    min-height: 120px; /* Asegura un espacio para el logo de 150px */
+    min-height: 120px; 
     box-sizing: border-box;
 }
 
@@ -46,7 +45,7 @@ body {
 .nav {
     display: flex;
     justify-content: center;
-    flex-grow: 1; /* Permite que el espacio del centro crezca para empujar a los otros */
+    flex-grow: 1; 
 }
 
 .nav ul li a{
@@ -59,31 +58,31 @@ body {
     list-style: none;
     gap: 2rem;
     margin: 0;
-    padding-bottom: 5px; /* Pequeño respiro sobre la línea */
+    padding-bottom: 5px; 
 }
 
 .menu a {
     text-decoration: none;
-    color: var(--color-secundario-1); /* Color de tu guía de estilos [cite: 120] */
-    font-family: var(--font-titulos); /* Cormorant SC [cite: 125] */
+    color: var(--color-secundario-1); 
+    font-family: var(--font-titulos); 
     font-size: 1.1rem;
-    white-space: nowrap; /* Evita que los enlaces se corten */
+    white-space: nowrap; 
 }
 
-/* Iconos de usuario y carrito [cite: 25, 26] */
+/* Iconos de usuario y carrito */
 .user-actions {
     display: flex;
     gap: 1.5rem;
     justify-content: flex-end;
     min-width: 200px;
-    padding-bottom: 5px; /* Alineado con el menú */
+    padding-bottom: 5px; 
 }
 
 .user-actions a, 
 .user-actions a:visited {
     text-decoration: none;
-    color: var(--color-principal) !important; /* Verde Oliva [cite: 118] */
-    font-family: var(--font-textos); /* Cormorant Garamond [cite: 127] */
+    color: var(--color-principal); 
+    font-family: var(--font-textos); 
     font-weight: 600;
     white-space: nowrap;
     display: flex;
@@ -92,7 +91,7 @@ body {
 }
 
 .user-actions a:hover {
-    color: var(--color-secundario-1) !important; /* Dorado [cite: 120] */
+    color: var(--color-secundario-1); 
 }
 
 .menu a:hover {
@@ -100,12 +99,12 @@ body {
 }
 
 .hamburger {
-    display: none; /* Oculto en escritorio */
-    font-size: 1.5rem;
+    display: none; 
+    font-size: 1.8rem;
     color: var(--color-principal);
 }
 
-/* CUERPO - ESTRUCTURA GENERAL [cite: 57-61] */
+/* CUERPO */
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -114,12 +113,12 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /*  */
+    grid-template-columns: 1fr 1fr; 
     gap: 3rem;
     margin-bottom: 3rem;
 }
 
-/* BLOQUE IMÁGENES [cite: 36-41] */
+/* BLOQUE IMÁGENES */
 .main-image img {
     width: 100%;
     border-radius: 4px;
@@ -133,10 +132,10 @@ body {
 
 .thumbnails img {
     width: calc(25% - 10px);
-    cursor: default; /* Como indica la tarea, no tienen comportamiento */
+    cursor: default; 
 }
 
-/* BLOQUE INFORMACIÓN [cite: 42-48] */
+/* BLOQUE INFORMACIÓN */
 .product-title {
     font-family: var(--font-titulos);
     color: var(--color-principal);
@@ -182,27 +181,27 @@ body {
     background-color: var(--color-secundario-1);
 }
 
-/* BLOQUE AMPLIADO [cite: 50-52] */
+/* BLOQUE AMPLIADO*/
 .extended-info {
     border-top: 1px solid var(--gris-claro);
     padding-top: 2rem;
 }
 
 .extended-info h2 {
-    font-family: var(--font-titulos); /* Cormorant SC [cite: 125] */
-    color: var(--color-principal); /* Verde Oliva [cite: 118] */
+    font-family: var(--font-titulos); 
+    color: var(--color-principal); 
     margin-bottom: 1.5rem;
 }
 
 /* Estilos específicos para los párrafos de la descripción  */
 .description-long p {
-    text-align: justify;    /* Justifica el texto para que quede alineado por ambos lados */
-    margin-bottom: 1.5rem;  /* Añade margen entre un párrafo y otro */
-    font-family: var(--font-textos); /* Cormorant Garamond [cite: 127] */
-    font-size: 1.1rem;      /* Ajuste de tamaño opcional para mejor legibilidad */
+    text-align: justify;    
+    margin-bottom: 1.5rem;  
+    font-family: var(--font-textos); 
+    font-size: 1.1rem;     
 }
 
-/* Opcional: Estilo para resaltar la lista de ingredientes */
+/* Estilo para resaltar la lista de ingredientes */
 .description-long strong {
     color: var(--color-principal);
     display: block;
@@ -215,34 +214,34 @@ body {
     max-width: 800px;
 }
 
-/* PIE DE PÁGINA [cite: 62-67] */
-/* PIE DE PÁGINA [cite: 62-67] */
+/* PIE DE PÁGINA  */
 .footer {
-    background-color: var(--gris-claro);
+    background-color: var(--blanco-roto);
+    border-top: 2px solid var(--color-principal);
     padding: 2rem 5%;
     display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual ancho  */
-    justify-items: center; /* Centra cada bloque de columna dentro de su espacio de la rejilla  */
+    grid-template-columns: repeat(4, 1fr); 
+    justify-items: center; 
     gap: 2rem;
     margin-top: 4rem;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Alineación del contenido dentro de cada columna [cite: 70, 81] */
+/* Alineación del contenido dentro de cada columna */
 .footer-column {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos (h3, ul, iconos) horizontalmente  */
-    text-align: center;  /* Centra el texto de los enlaces y títulos  */
+    align-items: center; 
+    text-align: center;  
 }
 
 .footer h3 {
-    font-family: var(--font-titulos); /* Cormorant SC [cite: 125] */
-    color: var(--color-principal); /* Verde Oliva [cite: 118] */
+    font-family: var(--font-titulos); 
+    color: var(--color-principal); 
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
-    width: 100%; /* Asegura que el título tenga espacio para centrarse */
+    width: 100%; 
 }
 
 .footer ul {
@@ -259,19 +258,19 @@ body {
     text-decoration: none;
     color: #444;
     transition: color 0.3s;
-    font-family: var(--font-textos); /* Cormorant Garamond [cite: 127] */
+    font-family: var(--font-textos); 
 }
 
 .footer ul li a:hover {
-    color: var(--color-secundario-1); /* [cite: 120] */
+    color: var(--color-secundario-1); 
 }
 
-/* Iconos de Redes Sociales [cite: 67] */
+/* Iconos de Redes Sociales */
 .social-icons {
     display: flex;
     gap: 1.5rem;
     font-size: 1.8rem;
-    justify-content: center; /* Asegura que los iconos estén centrados en su contenedor  */
+    justify-content: center; 
 }
 
 .social-icons a, 
@@ -283,10 +282,10 @@ body {
     color: var(--color-secundario-1); 
 }
 
-/* RESPONSIVE (MÓVIL) [cite: 21, 27, 80] */
+/* RESPONSIVE (MÓVIL)  */
 @media (max-width: 1024px) {
     .header {
-        flex-wrap: wrap; /* En tablets permite que se ajuste si no caben */
+        flex-wrap: wrap; 
         padding: 1rem;
     }
     
@@ -296,29 +295,46 @@ body {
 }
 @media (max-width: 768px) {
     .header {
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
     }
 
     .logo img {
-        height: 80px; /* Se reduce un poco solo en móvil para ahorrar espacio */
+        height: 90px;
     }
 
     .hamburger {
         display: block;
-        order: -1; /* Pone el icono de menú a la izquierda del logo si quieres */
+    }
+
+    .nav {
+        flex-grow: 0;
+    }
+
+    .user-actions {
+        min-width: auto;
+        justify-content: flex-end;
     }
 
     .menu {
-        display: none; /* Se oculta para el menú tipo hamburguesa [cite: 27, 80] */
+        display: none; 
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        grid-template-columns: 1fr; 
     }
 
     .footer {
-        grid-template-columns: 1fr; /* Columnas se apilan */
+        grid-template-columns: 1fr; 
         text-align: center;
     }
     
